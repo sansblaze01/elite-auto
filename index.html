@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Elite Auto — mécanique, réparation et entretien automobile. Consultez nos tarifs et contactez-nous pour votre véhicule.">
+<title>Elite Auto | Mécanique, réparation & entretien</title>
+<style>
+:root{--gold:#f2bd42;--gold2:#d99417;--black:#080808;--panel:#111;--white:#f5f5f5;--muted:#b7b7b7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}.topline{height:4px;background:linear-gradient(90deg,#8b5b0a,var(--gold),#fff1a6,var(--gold2))}
+header{position:sticky;top:0;z-index:10;background:rgba(7,7,7,.94);backdrop-filter:blur(12px);border-bottom:1px solid #3a2a10}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;letter-spacing:1px}.brand img{width:58px;height:58px;object-fit:contain}.brand span{font-size:1.2rem}.brand b{color:var(--gold)}
+nav{display:flex;gap:24px;align-items:center}nav a{text-decoration:none;font-size:.9rem;font-weight:700;color:#ddd}nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--gold);padding:12px 20px;font-weight:800;border-radius:4px;transition:.2s;cursor:pointer}.btn.primary{background:linear-gradient(135deg,#ffdf79,#d99118);color:#111;border:0}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.hero{position:relative;overflow:hidden;min-height:580px;display:flex;align-items:center;background:radial-gradient(ellipse at 80% 25%,#30240d 0,transparent 38%),linear-gradient(120deg,#050505 25%,#111 65%,#090909)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.15),rgba(0,0,0,.1));pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px 0;position:relative;z-index:1}.eyebrow{color:var(--gold);font-size:.8rem;font-weight:900;letter-spacing:4px;text-transform:uppercase}
+h1{font-size:clamp(2.8rem,6vw,5.4rem);line-height:.98;letter-spacing:-2px;margin:15px 0 22px;text-transform:uppercase}h1 span{color:var(--gold);text-shadow:0 0 25px #d99b2a22}.hero p{max-width:550px;color:#c9c9c9;font-size:1.1rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-logo{width:100%;max-width:500px;filter:drop-shadow(0 18px 35px #000);justify-self:center}
+.trust{border-top:1px solid #574018;border-bottom:1px solid #574018;background:#0d0d0d}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:22px 0;text-align:center}.trust-item{padding:8px 18px;border-right:1px solid #4a3714;font-weight:800}.trust-item:last-child{border:0}.trust-item strong{display:block;color:var(--gold);font-size:.82rem;letter-spacing:1.4px;text-transform:uppercase}.trust-item span{color:#ccc;font-size:.88rem}
+section{padding:82px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 42px}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;text-transform:uppercase;margin:10px 0}.section-head h2 span{color:var(--gold)}.section-head p{color:var(--muted);margin:12px auto 0}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:27px;background:linear-gradient(145deg,#171717,#0b0b0b);border:1px solid #302718;border-radius:8px}.icon{width:46px;height:46px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold);font-size:1.35rem;border-radius:50%;margin-bottom:16px}.card h3{margin:0 0 8px}.card p{color:var(--muted);font-size:.95rem;margin:0}
+.pricing{background:linear-gradient(180deg,#0d0d0d,#080808)}.price-layout{display:grid;grid-template-columns:1fr .8fr;gap:28px;align-items:start}.price-list{border:1px solid #463416;border-radius:8px;overflow:hidden}.price-row{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 22px;border-bottom:1px solid #302718;background:#111}.price-row:nth-child(even){background:#0b0b0b}.price-row:last-child{border-bottom:0}.price-row span{font-weight:700}.price-row strong{color:var(--gold);font-size:1.35rem;white-space:nowrap}.price-note{font-size:.85rem;color:#aaa;padding:18px 22px;background:#0a0a0a;border-top:1px solid #392a12}.price-art{width:100%;border:1px solid #4a3714;border-radius:8px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}.about-mark{border:1px solid #4b3713;background:radial-gradient(ellipse,#1e1709,#090909);padding:28px;border-radius:8px}.about-mark img{width:100%;display:block}.about h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:10px 0 20px}.about h2 span{color:var(--gold)}.about p{color:#c0c0c0}.checks{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}.checks li:before{content:"✓";color:var(--gold);font-weight:900;margin-right:9px}
+.contact{background:radial-gradient(ellipse at 50% 0,#251a08,#080808 60%)}.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:35px;border:1px solid #493513;border-radius:8px;background:#0b0b0be8}.contact-box h3{font-size:1.5rem;margin-top:0}.contact-box p{color:#bbb}.contact-details{display:grid;gap:14px}.detail{padding:14px 16px;background:#141414;border-left:2px solid var(--gold)}.detail b{display:block;color:var(--gold);font-size:.8rem;letter-spacing:1px;text-transform:uppercase}.detail span{color:#eee}
+form{display:grid;gap:12px}label{font-size:.86rem;color:#ddd}input,select,textarea{width:100%;padding:13px;background:#111;border:1px solid #3b3325;color:white;border-radius:4px;font:inherit}textarea{min-height:105px;resize:vertical}input:focus,select:focus,textarea:focus{outline:1px solid var(--gold)}.form-help{font-size:.78rem;color:#999}
+footer{border-top:1px solid #453213;padding:25px 0;color:#999;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:var(--gold)}
+@media(max-width:800px){nav{gap:12px}nav a:not(.btn){display:none}.hero-grid,.price-layout,.about,.contact-box{grid-template-columns:1fr}.hero-grid{padding:48px 0}.hero-logo{max-width:340px;grid-row:1}.services{grid-template-columns:1fr 1fr}.about-mark{max-width:360px;margin:auto}.price-art{max-width:600px;margin:auto}.trust-grid{grid-template-columns:1fr;gap:8px}.trust-item{border-right:0;border-bottom:1px solid #302718}.trust-item:last-child{border:0}}
+@media(max-width:520px){.services{grid-template-columns:1fr}.brand span{font-size:1rem}.brand img{width:45px;height:45px}.nav>.btn{padding:9px 11px;font-size:.8rem}.hero{min-height:auto}h1{letter-spacing:-1px}.price-row{padding:15px 13px}.price-row span{font-size:.9rem}.price-row strong{font-size:1.15rem}.checks{grid-template-columns:1fr}.contact-box{padding:22px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><div class="wrap nav">
+<a class="brand" href="#accueil"><img src="logo-elite-auto.png" alt="Logo Elite Auto"><span>ELITE <b>AUTO</b></span></a>
+<nav aria-label="Navigation principale"><a href="#services">Services</a><a href="#tarifs">Tarifs</a><a href="#garage">Le garage</a><a href="#contact" class="btn primary">Nous contacter</a></nav>
+</div></header>
+<main>
+<section class="hero" id="accueil"><div class="wrap hero-grid">
+<div><div class="eyebrow">Mécanique · Réparation · Entretien</div><h1>Votre auto.<br><span>Notre expertise.</span></h1><p>Un service sérieux pour entretenir et réparer votre véhicule. Chez Elite Auto, nous mettons notre savoir-faire au service de votre tranquillité.</p><div class="actions"><a class="btn primary" href="#contact">Demander un devis</a><a class="btn" href="#tarifs">Voir nos tarifs</a></div></div>
+<img class="hero-logo" src="logo-elite-auto.png" alt="Emblème doré du garage Elite Auto">
+</div></section>
+<div class="trust"><div class="wrap trust-grid"><div class="trust-item">🔧 <strong>Savoir-faire</strong><span>Une équipe professionnelle</span></div><div class="trust-item">✦ <strong>Qualité</strong><span>Un travail soigné</span></div><div class="trust-item">◷ <strong>Disponibilité</strong><span>Un service fiable et réactif</span></div></div></div>
+<section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">Nos prestations</div><h2>Le bon entretien, <span>au bon moment.</span></h2><p>De l'entretien courant aux opérations de freinage, nous vous accompagnons pour prendre soin de votre véhicule.</p></div>
+<div class="services">
+<article class="card"><div class="icon">⚙</div><h3>Vidange moteur</h3><p>Entretien courant pour contribuer au bon fonctionnement et à la longévité de votre moteur.</p></article>
+<article class="card"><div class="icon">◈</div><h3>Freinage</h3><p>Remplacement des plaquettes et disques de frein, à l'avant comme à l'arrière.</p></article>
+<article class="card"><div class="icon">⌁</div><h3>Contrôle des niveaux</h3><p>Vérification des niveaux et contrôle de la pression des pneumatiques.</p></article>
+<article class="card"><div class="icon">✧</div><h3>Suspension</h3><p>Intervention sur les triangles et éléments de liaison au sol selon diagnostic.</p></article>
+<article class="card"><div class="icon">⌕</div><h3>Diagnostic & conseil</h3><p>Un premier échange pour comprendre votre besoin et orienter la réparation.</p></article>
+<article class="card"><div class="icon">✓</div><h3>Entretien personnalisé</h3><p>Une prestation adaptée à votre véhicule, après vérification des travaux nécessaires.</p></article>
+</div></div></section>
+<section class="pricing" id="tarifs"><div class="wrap"><div class="section-head"><div class="eyebrow">Clair et transparent</div><h2>Nos <span>tarifs</span></h2><p>Tarifs de main-d’œuvre indicatifs. Les pièces sont fournies par le client, comme indiqué sur notre grille.</p></div>
+<div class="price-layout"><div class="price-list">
+<div class="price-row"><span>Vidange moteur</span><strong>35 €</strong></div>
+<div class="price-row"><span>Triangle de suspension</span><strong>50 €</strong></div>
+<div class="price-row"><span>Plaquettes avant ou arrière</span><strong>30 €</strong></div>
+<div class="price-row"><span>Disques avant ou arrière (ou les deux essieux selon devis)</span><strong>30 €</strong></div>
+<div class="price-row"><span>Disques + plaquettes</span><strong>60 €</strong></div>
+<div class="price-row"><span>Niveaux + pression des pneus</span><strong>15 €</strong></div>
+<div class="price-note">Les tarifs peuvent varier selon le véhicule, l'accessibilité et les travaux réellement nécessaires. Confirmation du prix avant intervention. Les pièces sont à fournir par le client.</div>
+</div><img class="price-art" src="tarifs-mecanique.png" alt="Grille tarifaire Elite Auto en noir et or"></div>
+</div></section>
+<section id="garage"><div class="wrap about"><div class="about-mark"><img src="logo-elite-auto.png" alt="Logo Elite Auto"></div><div><div class="eyebrow">À propos d'Elite Auto</div><h2>La passion de la mécanique, <span>l'excellence du service.</span></h2><p>Nous voulons rendre l'entretien automobile plus simple grâce à un accueil clair, des explications compréhensibles et une attention portée à chaque intervention.</p><ul class="checks"><li>Accueil à l'écoute</li><li>Tarifs annoncés</li><li>Travail soigné</li><li>Conseils adaptés</li></ul><a class="btn primary" href="#contact">Parlons de votre véhicule</a></div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="section-head"><div class="eyebrow">Contact & rendez-vous</div><h2>Parlons de <span>votre voiture.</span></h2><p>Décrivez votre besoin : nous pourrons vous recontacter pour préciser la prestation et convenir d'un rendez-vous.</p></div>
+<div class="contact-box"><div><h3>Contactez Elite Auto</h3><p>Les coordonnées du garage peuvent être ajoutées ici pour que vos clients puissent vous joindre directement.</p><div class="contact-details"><div class="detail"><b>Téléphone</b><span>À renseigner</span></div><div class="detail"><b>Adresse</b><span>À renseigner</span></div><div class="detail"><b>Horaires</b><span>À renseigner</span></div></div></div>
+<form id="contactForm"><label for="name">Votre nom</label><input id="name" name="name" autocomplete="name" required placeholder="Nom et prénom"><label for="phone">Téléphone ou e-mail</label><input id="phone" name="phone" required placeholder="Comment vous joindre ?"><label for="service">Prestation souhaitée</label><select id="service" name="service"><option>Vidange moteur</option><option>Freinage</option><option>Triangle de suspension</option><option>Niveaux et pression</option><option>Autre demande</option></select><label for="message">Votre message</label><textarea id="message" name="message" placeholder="Marque, modèle, année du véhicule et besoin..."></textarea><button class="btn primary" type="submit">Préparer ma demande</button><div class="form-help">Ce formulaire ouvre votre application e-mail. Ajoutez l'adresse e-mail du garage dans le code pour recevoir les demandes.</div></form>
+</div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> <strong>Elite Auto</strong> — Mécanique, réparation & entretien</span><span>La passion de la mécanique, l'excellence du service.</span></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject=encodeURIComponent('Demande de rendez-vous - Elite Auto');const body=encodeURIComponent('Nom : '+d.get('name')+'\\nContact : '+d.get('phone')+'\\nPrestation : '+d.get('service')+'\\nMessage : '+d.get('message'));window.location.href='mailto:EMAIL_DU_GARAGE_A_REMPLACER?subject='+subject+'&body='+body;});
+</script>
+</body></html>
